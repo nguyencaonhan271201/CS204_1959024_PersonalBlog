@@ -540,9 +540,9 @@ a.carousel-control-prev, a.carousel-control-next {
     animation: float-up 1s ease-in;
 }
 
-.post-cover-img {
-    width: 300px;
-    height: 300px;
+.profile-img-large {
+    width: 300px !important;
+    height: 300px !important;
 }
 
 @keyframes float-up {
@@ -645,16 +645,16 @@ a.carousel-control-prev, a.carousel-control-next {
 
 @media only screen and (max-width: 1199px) {
     .profile-img-large {
-        height: 200px;
-        width: 200px;
+        height: 250px !important;
+        width: 250px !important;
         margin: 0 auto;
     }
 }
 
 @media only screen and (max-width: 992px) {
-    .post-cover-img {
-        width: 300px;
-        height: 300px;
+    .profile-img-large {
+        width: 200px !important;
+        height: 200px !important;
     }
     
     .join-us {
@@ -665,6 +665,10 @@ a.carousel-control-prev, a.carousel-control-next {
     .sign-in {
         height: auto !important;
         padding-bottom: 13px !important;
+    }
+
+    .post-cover-img {
+        max-width: 100%;
     }
 }
 
@@ -684,9 +688,9 @@ a.carousel-control-prev, a.carousel-control-next {
         margin-top: 0px;
     }
 
-    .post-cover-img {
-        width: 200px;
-        height: 200px;
+    .profile-img-large {
+        width: 200px !important;
+        height: 200px !important;
     }    
 }
 

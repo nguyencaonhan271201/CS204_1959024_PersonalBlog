@@ -2,6 +2,15 @@
     include("includes/header.php");
     include("func/profileFunctions.php");
 
+    if (!$_SESSION['signed_in'] && !isset($_GET['id'])) {
+        if (headers_sent()) {
+            echo "<script>window.location.href = 'index.php?error_create=true';</script>";
+        }
+        else{
+            header("Location: index.php?error_create=true");
+        }
+    }
+
     //Get profile of user by $user_id
     $profile = getProfile($_GET, $conn);
     //Get posts of user
