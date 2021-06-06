@@ -20,10 +20,10 @@
             <h1 class="text-center">Profile</h1>
         <?php endif; ?>
     <div class="row mt-3">
-        <div class="col-md-4 offset-md-0 col-8 offset-2 p-4 d-flex align-items-center">
+        <div class="col-md-4 offset-md-0 col-8 offset-2 p-lg-4 p-2 d-flex align-items-center">
             <img src="<?php echo $profile['user_img'];?>" alt="" class="rounded-circle profile-img-large">
         </div>
-        <div class="profile-info col-md-8 offset-md-0 col-sm-8 offset-sm-2 p-4 d-flex align-items-center justify-content-start">
+        <div class="profile-info col-md-8 offset-md-0 col-sm-8 offset-sm-2 p-lg-4 p-2 d-flex align-items-center justify-content-start">
             <div class="profile-info-content">
                 <h1><?php echo $profile['display_name']; ?></h1>
                 <h4 class="font-weight-light font-italic">Username: <?php echo $profile['username']; ?></h4>
@@ -32,7 +32,7 @@
                 <h4 class="font-weight-light font-italic">Account Role: <?php echo $profile['user_role'] == 2? "User" : 
                 ($profile['username'] == 'admin'? "Senior Admin" : "Admin")?></h4>
                 <?php if(isset($_SESSION['user_id']) && $profile['ID'] == $_SESSION['user_id']): ?>
-                    <a href="edit_profile.php?id=<?php echo $_SESSION['user_id']?>" class="btn btn-info">Edit your profile</a>
+                    <a href="edit_profile.php?id=<?php echo $_SESSION['user_id']?>" class="btn btn-info btn-edit-profile mt-sm-3">Edit your profile</a>
                 <?php endif; ?>
             </div>
         </div>
