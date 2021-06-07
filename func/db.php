@@ -387,7 +387,7 @@ function managementUsers($conn) {
 }
 
 function managementPosts($conn) {
-    $query = "SELECT p.ID, p.title, p.cover, u.ID as author, t.tag_name, t.ID as tag_id, u.display_name, p.date_posted,
+    $query = "SELECT p.ID, p.title, p.cover, u.ID as author, t.tag_name, t.ID as tag_id, u.display_name, DATE_ADD(p.date_posted, INTERVAL 7 HOUR) as date_posted,
     (SELECT SUM(stars) FROM stars WHERE stars.post_id = p.ID) as sum_stars,
     (SELECT COUNT(*) FROM stars WHERE stars.post_id = p.ID) as count_rates,
     (SELECT COUNT(*) FROM comments WHERE comments.post = p.ID) as count_comments,
